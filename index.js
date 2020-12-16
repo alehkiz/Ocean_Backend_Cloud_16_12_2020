@@ -3,10 +3,11 @@ const bodyParser = require('body-parser');
 const mongodb = require('mongodb');
 
 const port = process.env.PORT || 3000;
+const pass = process.env.PASS || 0
 
 (async () => {
 
-const connectionString = 'mongodb+srv://admin:RiMH6SMKIB5KrkoU@cluster0.axkcc.mongodb.net/ocean_bancodados_16_12_2020?retryWrites=true&w=majority';
+const connectionString = `mongodb+srv://admin:${pass}@cluster0.axkcc.mongodb.net/ocean_bancodados_16_12_2020?retryWrites=true&w=majority`;
 
 console.info('Conectando ao banco de dados...');
 
