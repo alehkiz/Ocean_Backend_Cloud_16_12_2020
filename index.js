@@ -1,13 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('mongodb');
+require('dotenv').config();
 
 const port = process.env.PORT || 3000;
-const pass = process.env.PASS || 0
+const pass = process.env.PASS || 0;
 
 (async () => {
-
-console.log(pass)
 const connectionString = `mongodb+srv://admin:${pass}@cluster0.axkcc.mongodb.net/ocean_bancodados_16_12_2020?retryWrites=true&w=majority`;
 
 console.info('Conectando ao banco de dados...');
